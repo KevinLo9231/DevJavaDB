@@ -1,0 +1,21 @@
+{
+	"name": "Java & MSSQL Development",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "java-app",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "vscjava.vscode-java-pack",       // Java development extensions
+		  "ms-azuretools.vscode-docker",    // Docker integration
+		  "redhat.java",                    // Java language support
+		  "vscjava.vscode-spring-initializr", // Spring Boot integration (if needed)
+		  "ms-mssql.mssql"                  // MSSQL extension for database interaction
+		],
+		"settings": {
+		  "java.jdt.ls.java.home": "/opt/java/openjdk"  // Path to JDK in container
+		}
+	  }
+	}
+}
+  
