@@ -6,25 +6,29 @@ services:
       dockerfile: Dockerfile
     container_name: java-container
     volumes:
-      - .:/workspace
+      - ../:/workspace
+    environment:
+      - JAVA_HOME=/opt/java/openjdk
     ports:
       - "8080:8080"
     networks:
       - app-network
+    command: sleep infinity
 
   mssql-db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: mssql-container
     environment:
-      - SA_PASSWORD=YourPassword123
       - ACCEPT_EULA=Y
-      - DB_NAME=mydb
+      - SA_PASSWORD=YourPassword123
+      - MSSQL_PID=Developer
     ports:
       - "1433:1433"
     networks:
       - app-network
     volumes:
       - mssql-data:/var/opt/mssql
+    restart: unless-stopped
 
 networks:
   app-network:
