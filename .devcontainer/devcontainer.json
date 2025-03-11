@@ -6,14 +6,14 @@
 	"customizations": {
 	  "vscode": {
 		"extensions": [
-		  "vscjava.vscode-java-pack",       // Java development extensions
-		  "ms-azuretools.vscode-docker",    // Docker integration
-		  "redhat.java",                    // Java language support
-		  "vscjava.vscode-spring-initializr", // Spring Boot integration (if needed)
-		  "ms-mssql.mssql"                  // MSSQL extension for database interaction
+		  "vscjava.vscode-java-pack",       
+		  "ms-azuretools.vscode-docker",    
+		  "redhat.java",                    
+		  "vscjava.vscode-spring-initializr", 
+		  "ms-mssql.mssql"                  
 		],
 		"settings": {
-		  "java.jdt.ls.java.home": "/opt/java/openjdk"  // Path to JDK in container
+		  "java.jdt.ls.java.home": "/usr/lib/jvm/java-11-openjdk-amd64"  
 		}
 	  }
 	}

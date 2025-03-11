@@ -8,19 +8,19 @@ services:
     volumes:
       - ../:/workspace
     environment:
-      - JAVA_HOME=/opt/java/openjdk
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 
     ports:
       - "8080:8080"
     networks:
       - app-network
-    command: sleep infinity
-
+    command: sleep infinity  
+    
   mssql-db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: mssql-container
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=YourPassword123
+      - SA_PASSWORD=bigred
       - MSSQL_PID=Developer
     ports:
       - "1433:1433"
